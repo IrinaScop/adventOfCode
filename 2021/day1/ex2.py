@@ -13,7 +13,7 @@ for line in Lines:
     mylist.append(int(line.strip()))
     #print("Line{}: {}".format(count, line.strip()))
 
-for i in range(0,len(mylist)-2,3):
+for i in range(0,len(mylist)-2):
     sum_list.append(mylist[i] +mylist[i+1] + mylist[i+2])
 
 count = 0
