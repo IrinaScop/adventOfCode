@@ -9,6 +9,7 @@ Lines = file.readlines()
  
 # Strips the newline character
 for line in Lines:
+
     mylist.append(int(line.strip()))
     #print("Line{}: {}".format(count, line.strip()))
 
