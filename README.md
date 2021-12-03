@@ -33,8 +33,6 @@ In addition to horizontal position and depth, you'll also need to track a third 
     <ul> - It increases your depth by your aim multiplied by X.</ul>  
    
 Using this new interpretation of the commands, calculate the horizontal position and depth you would have after following the planned course. What do you get if you multiply your final horizontal position by your final depth?</p>
-<hr>
-<p><i> (on every puzzle the input is given from the adventofcode randomly to each player)</i></p>
 
 <hr>
 <h3> DAY3</h3>
@@ -49,3 +47,7 @@ Use the binary numbers in the diagnostic report (binary.txt) to generate two new
 What is the power consumption of the submarine? (Be sure to represent your answer in decimal, not binary.)
   
 <p><b>ex2.</b>
+  
+  
+<hr>
+<p><i> (on every puzzle the input is given from the adventofcode randomly to each player)</i></p>
