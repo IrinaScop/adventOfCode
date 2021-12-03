@@ -35,3 +35,17 @@ In addition to horizontal position and depth, you'll also need to track a third 
 Using this new interpretation of the commands, calculate the horizontal position and depth you would have after following the planned course. What do you get if you multiply your final horizontal position by your final depth?</p>
 <hr>
 <p><i> (on every puzzle the input is given from the adventofcode randomly to each player)</i></p>
+
+<hr>
+<h3> DAY3</h3>
+
+<p><b>ex1.</b>
+Use the binary numbers in the diagnostic report (binary.txt) to generate two new binary numbers (called the gamma rate and the epsilon rate). The power consumption can then be found by multiplying the gamma rate by the epsilon rate.
+
+- Each bit in the gamma rate can be determined by finding the most common bit in the corresponding position of all numbers in the diagnostic report.
+
+- The epsilon rate is calculated in a similar way; rather than use the most common bit, the least common bit from each position is used.
+
+What is the power consumption of the submarine? (Be sure to represent your answer in decimal, not binary.)
+  
+<p><b>ex2.</b>
