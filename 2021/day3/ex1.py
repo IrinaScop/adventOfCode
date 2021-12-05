@@ -12,7 +12,6 @@ def createlist(txt, mode):
 
     return binaryList
 
-
 #-------------------------------------------------- 
 def mostFrequentBit(mylist, i):
 #--------------------------------------------------
@@ -27,6 +26,20 @@ def mostFrequentBit(mylist, i):
     return zeros, ones
 
 #-------------------------------------------------- 
+def createBinaryNumbers(zeros,ones,g,e):
+#--------------------------------------------------
+    gamma = g
+    epsilon = e
+
+    if zeros > ones:
+        gamma = gamma + "0"
+        epsilon= epsilon + "1"
+    elif ones > zeros:
+        gamma = gamma + "1"
+        epsilon= epsilon + "0"
+    return gamma, epsilon
+
+#-------------------------------------------------- 
 def findBinaryNumbers(mylist):
 #--------------------------------------------------
     binaryList = mylist
@@ -39,26 +52,15 @@ def findBinaryNumbers(mylist):
     epsilon = ''
 
     for i in range(lenOflist):
-
-        zeros, ones = mostFrequent(mylist, i)
-
-        if zeros > ones:
-            gamma = gamma + "0"
-            epsilon= epsilon + "1"
-            print(gamma)
-        elif ones > zeros:
-            gamma = gamma + "1"
-            epsilon= epsilon + "0"
-
+        zeros, ones = mostFrequentBit(mylist, i) 
+        gamma, epsilon = createBinaryNumbers(zeros,ones, gamma, epsilon)
     return gamma, epsilon
 
 #-------------------------------------------------- 
 def main():
 #--------------------------------------------------
     binaryList=[]
-
     binaryList = createlist("binary.txt", "r")
-
     gamma, epsilon = findBinaryNumbers(binaryList)
 
     dec_gamma = int(gamma, 2)
