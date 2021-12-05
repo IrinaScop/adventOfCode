@@ -63,18 +63,26 @@ def multipliers(mylist):
     return gamma, epsilon
 
 #-------------------------------------------------- 
+def binaryToDecimal(binaryNumber):
+#--------------------------------------------------
+    dec = binaryNumber
+
+    dec= int(binaryNumber, 2)
+
+    return dec
+
+#-------------------------------------------------- 
 def main():
 #--------------------------------------------------
     binaryList=[]
     binaryList = createlist("binary.txt", "r")
     gamma, epsilon = multipliers(binaryList)
 
-    dec_gamma = int(gamma, 2)
-    decimal_epsilon = int(epsilon, 2)
+    dec_gamma = binaryToDecimal(gamma)
+    decimal_epsilon = binaryToDecimal(epsilon)
 
     print("Binary number gamma:", gamma, " is equal to decimal number:",dec_gamma)
     print("Binary number epsilon:", epsilon, " is equal to epsilon number:",decimal_epsilon)
-
     print("The power consumption of the submarine is gamma multuplied by epsilon = ", (dec_gamma*decimal_epsilon))
 
 
