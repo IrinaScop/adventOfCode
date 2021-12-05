@@ -31,7 +31,7 @@ def mostFrequentBit(mylist, i):
     return mfb
 
 #-------------------------------------------------- 
-def createBinaryNumbers(mfb,g,e):
+def createMultipliers(mfb,g,e):
 #--------------------------------------------------
     mostFreqBit = mfb
     gamma = g
@@ -46,7 +46,7 @@ def createBinaryNumbers(mfb,g,e):
     return gamma, epsilon
 
 #-------------------------------------------------- 
-def findBinaryNumbers(mylist):
+def multipliers(mylist):
 #--------------------------------------------------
     binaryList = mylist
 
@@ -59,7 +59,7 @@ def findBinaryNumbers(mylist):
 
     for i in range(lenOflist):
         mfb = mostFrequentBit(mylist, i) 
-        gamma, epsilon = createBinaryNumbers(mfb, gamma, epsilon)
+        gamma, epsilon = createMultipliers(mfb, gamma, epsilon)
     return gamma, epsilon
 
 #-------------------------------------------------- 
@@ -67,7 +67,7 @@ def main():
 #--------------------------------------------------
     binaryList=[]
     binaryList = createlist("binary.txt", "r")
-    gamma, epsilon = findBinaryNumbers(binaryList)
+    gamma, epsilon = multipliers(binaryList)
 
     dec_gamma = int(gamma, 2)
     decimal_epsilon = int(epsilon, 2)
