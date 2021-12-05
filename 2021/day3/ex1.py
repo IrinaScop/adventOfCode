@@ -23,18 +23,24 @@ def mostFrequentBit(mylist, i):
             zeros = zeros + 1
         elif ((mylist[y])[i]) == "1":
             ones = ones + 1
-    return zeros, ones
+
+        if zeros > ones:
+            mfb = "0"
+        elif zeros < ones:
+            mfb = "1"
+    return mfb
 
 #-------------------------------------------------- 
-def createBinaryNumbers(zeros,ones,g,e):
+def createBinaryNumbers(mfb,g,e):
 #--------------------------------------------------
+    mostFreqBit = mfb
     gamma = g
     epsilon = e
 
-    if zeros > ones:
+    if (mostFreqBit == "1"):
         gamma = gamma + "0"
         epsilon= epsilon + "1"
-    elif ones > zeros:
+    elif (mostFreqBit == "0"):
         gamma = gamma + "1"
         epsilon= epsilon + "0"
     return gamma, epsilon
@@ -52,8 +58,8 @@ def findBinaryNumbers(mylist):
     epsilon = ''
 
     for i in range(lenOflist):
-        zeros, ones = mostFrequentBit(mylist, i) 
-        gamma, epsilon = createBinaryNumbers(zeros,ones, gamma, epsilon)
+        mfb = mostFrequentBit(mylist, i) 
+        gamma, epsilon = createBinaryNumbers(mfb, gamma, epsilon)
     return gamma, epsilon
 
 #-------------------------------------------------- 
