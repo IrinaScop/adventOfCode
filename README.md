@@ -1,9 +1,5 @@
 # adventOfCode
 
-Advent of Code is an Advent calendar of small programming puzzles for a variety of skill sets and skill levels: https://adventofcode.com/. 
-
-The days folders represent each day of the calendar.
-<hr>
 <h3> DAY1</h3>
 
 <p><b>ex1.</b>
