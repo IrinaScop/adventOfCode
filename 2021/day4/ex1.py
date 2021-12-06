@@ -46,13 +46,8 @@ def findWinningBoard(bingoNumbers,board, checkBoards):
                 for z in range(len(board[0][0])):
                     if (board[i][y][z] == number):
                         checkBoards[i][y][z] = '1'
-                if (checkBoards[i][y]) == ['1','1','1','1','1']:
-                    print("BINGO!!! The winner is Board: ", i, " and row: ",y)
+                if ((checkBoards[i][y]) or (checkBoards[i][z])) == ['1','1','1','1','1']:
                     bingoFoundInRow = True
-                    break
-                if (checkBoards[i][z]) == ['1','1','1','1','1']:
-                    print("BINGO!!! The winner is Board: ", i, " and column: ", z)
-                    bingoFoundInColumn = True
                     break
             if(bingoFoundInRow or bingoFoundInColumn):
                 break
