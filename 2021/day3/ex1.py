@@ -13,15 +13,15 @@ def createlist(txt, mode):
     return binaryList
 
 #-------------------------------------------------- 
-def mostFrequentBit(mylist, i):
+def mostFrequentBit(mylist, x):
 #--------------------------------------------------
     zeros = 0
     ones = 0
 
-    for y in range(len(mylist)):
-        if ((mylist[y])[i]) == "0":
+    for row in range(len(mylist)):
+        if ((mylist[row])[x]) == "0":
             zeros = zeros + 1
-        elif ((mylist[y])[i]) == "1":
+        elif ((mylist[row])[x]) == "1":
             ones = ones + 1
 
         if zeros > ones:
@@ -58,7 +58,7 @@ def multipliers(mylist):
     epsilon = ''
 
     for i in range(lenOflist):
-        mfb = mostFrequentBit(mylist, i) 
+        mfb = mostFrequentBit(binaryList, i) 
         gamma, epsilon = createMultipliers(mfb, gamma, epsilon)
     return gamma, epsilon
 
@@ -66,7 +66,6 @@ def multipliers(mylist):
 def binaryToDecimal(binaryNumber):
 #--------------------------------------------------
     dec = binaryNumber
-
     dec= int(binaryNumber, 2)
 
     return dec
