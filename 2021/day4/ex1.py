@@ -36,23 +36,40 @@ def createBoards(inputlist):
 #--------------------------------------------------
 def findWinningBoard(bingoNumbers,board, checkBoards):
 #--------------------------------------------------
-    bingoFoundInRow = False
-    bingoFoundInColumn = False
+    bingoFound = False
 
     for number in bingoNumbers:
-        #print("NUMBER = ", number)
         for i in range(len(board)):
-            for y in range(len(board[0])):
-                for z in range(len(board[0][0])):
+            for y in range(len(board[0][0])):
+                bingo = 0
+                rowFound = False
+                for z in range(len(board[0])):
                     if (board[i][y][z] == number):
                         checkBoards[i][y][z] = '1'
-                if ((checkBoards[i][y]) or (checkBoards[i][z])) == ['1','1','1','1','1']:
-                    bingoFoundInRow = True
+                    if(checkBoards[i][y][z] == '1'):
+                        bingo = bingo + 1
+                    if(bingo == 5):
+                        bingoFound = True
+                        break
+
+            for z in range(len(board[0][0])):
+                bingo = 0
+                rowFound = False
+                for y in range(len(board[0])):
+                    #print(board[i][y][z])
+                    if (board[i][y][z] == number):
+                        checkBoards[i][y][z] = '1'
+                    if(checkBoards[i][y][z] == '1'):
+                        bingo = bingo + 1
+                    if(bingo == 5):
+                        bingoFound = True
+                        break
+                if(bingoFound):
                     break
-            if(bingoFoundInRow or bingoFoundInColumn):
+            if(bingoFound):
                 break
-        if(bingoFoundInRow or bingoFoundInColumn):
-                break
+        if(bingoFound):
+            break
 
 
     #print(checkBoards)
